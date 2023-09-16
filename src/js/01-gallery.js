@@ -4,7 +4,7 @@ import { galleryItems } from './gallery-items';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import { markup } from './markup';
+import markup from './markup';
 
 const gallery = document.querySelector('.gallery');
 

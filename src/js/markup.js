@@ -1,4 +1,4 @@
-function markup(data) {
+export default function markup(data) {
   const imgs = data.map(item => {
     const img = `<li class="gallery__item">
    <a class="gallery__link" href="${item.original}">
@@ -9,5 +9,3 @@ function markup(data) {
   });
   return imgs.join('');
 }
-
-export { markup };
