@@ -6,14 +6,11 @@ const form = document.querySelector('.feedback-form');
 const email = form.elements.email;
 const message = form.elements.message;
 const formData = {};
+const inputData = JSON.parse(localStorage.getItem(LS_KEY));
 
-if (localStorage.getItem(LS_KEY) === null) {
-  email.value = '';
-  message.value = '';
-} else {
-  const values = JSON.parse(localStorage.getItem(LS_KEY));
-  email.value = values.email;
-  message.value = values.message;
+if (inputData) {
+  email.value = inputData.email ? inputData.email : '';
+  message.value = inputData.message ? inputData.message : '';
 }
 
 const inputHandler = e => {
